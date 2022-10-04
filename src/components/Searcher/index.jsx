@@ -28,7 +28,7 @@ const Searcher = (props) => {
         id='outlined-basic'
         label='GitHub User'
         variant='outlined'
-        placeholder='Octocal'
+        placeholder='Octocat'
         value={valueInput}
         onChange={onSearchValueChange}
         size='small'

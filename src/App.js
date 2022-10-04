@@ -1,13 +1,36 @@
+import { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
-import { useState } from 'react';
 import './App.css';
 import Searcher from './components/Searcher';
+import UserCard from './containers/UserCard';
+import { getGithubUser } from './services/users';
 
 function App() {
 
-  const [inputUser, setInputUser] = useState('octocal');
+  const [inputUser, setInputUser] = useState('octocat');
   const [userState, setUserState] = useState('userState');
+  const [notfound, setNotFound] = useState(false);
 
+  const gettingUser = async(user) => {
+    const userResponse = await getGithubUser(user)
+
+    if (userState === 'octocat') {
+      localStorage.setItem('octocat', userResponse);
+    }
+    
+    if (userResponse.message === 'Not Fount') {
+      const { octocat } = localStorage;
+
+      setInputUser(octocat);
+      setNotFound(true);
+    } else {
+      setUserState(userResponse);
+    }
+  }
+
+  useEffect(() => {
+      gettingUser(inputUser);
+    }, [inputUser]);
 
   return (
     <div className="App">
@@ -22,6 +45,7 @@ function App() {
         alignItems: 'center',
       }} >
         <Searcher inputUser={inputUser} setInputUser={setInputUser} />
+        <UserCard userState={userState} />
       </Container>
     </div>
   );
