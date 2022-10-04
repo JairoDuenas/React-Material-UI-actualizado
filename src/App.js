@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { Container } from '@mui/material';
 import './App.css';
+import Searcher from './components/Searcher';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container sx={{
+        background: '#e0e0e0',
+        width: '95vw',
+        height: '100vw',
+        borderRadius: '16px',
+        margin: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }} >
+        <Searcher />
+      </Container>
     </div>
   );
 }
