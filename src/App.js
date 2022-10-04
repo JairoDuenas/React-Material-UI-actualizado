@@ -1,8 +1,14 @@
 import { Container } from '@mui/material';
+import { useState } from 'react';
 import './App.css';
 import Searcher from './components/Searcher';
 
 function App() {
+
+  const [inputUser, setInputUser] = useState('octocal');
+  const [userState, setUserState] = useState('userState');
+
+
   return (
     <div className="App">
       <Container sx={{
@@ -15,7 +21,7 @@ function App() {
         flexDirection: 'column',
         alignItems: 'center',
       }} >
-        <Searcher />
+        <Searcher inputUser={inputUser} setInputUser={setInputUser} />
       </Container>
     </div>
   );
