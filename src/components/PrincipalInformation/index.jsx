@@ -6,14 +6,14 @@ const PrincipalInformation = (props) => {
   const {
     name,
     login,
-    create_at,
+    created_at,
   } = userState
 
   return (
     <>
       <Stack>
         <Typography>{name}</Typography>
-        <Typography>{create_at}</Typography>
+        <Typography>{created_at}</Typography>
       </Stack>
       <Typography>{login}</Typography>
     </>
