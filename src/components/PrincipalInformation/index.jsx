@@ -11,7 +11,13 @@ const PrincipalInformation = (props) => {
 
   return (
     <>
-      <Stack direction='row' sx={{justifyContent: 'space-between'}}>
+      <Stack
+        direction={{ xs: 'column', sm: 'row' }}
+        sx={{ justifyContent: 'space-evenly' }}
+
+        columns={{ xs: 1, sm: 4, md: 8 }}
+        spacing={{ xs: 1, sm: 4, md: 4 }}
+      >
         <Typography variant='h4'>{name}</Typography>
         <Typography variant='subtitle2'>{created_at}</Typography>
       </Stack>

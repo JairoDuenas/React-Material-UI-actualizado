@@ -32,12 +32,12 @@ const Searcher = (props) => {
         value={valueInput}
         onChange={onSearchValueChange}
         size='small'
-        sx={{width: '90%', background: '#fafafa',}}
+        sx={{width: '95%', background: '#fafafa',}}
       />
       <IconButton
         onClick={handleSubmit}
         size='samll'
-        sx={{ left: '-45px' }} >
+        sx={{ left: '-40px' }} >
         <SearchIcon />
       </IconButton>
     </Stack>

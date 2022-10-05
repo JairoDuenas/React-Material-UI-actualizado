@@ -1,4 +1,4 @@
-import { Grid, Paper, Stack, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -17,6 +17,7 @@ const LocationInformation = (props) => {
   return (
     <Grid
       container
+      direction={{ xs: 'column', sm: 'row' }}
       spacing={2}
       sx={{marginTop: '15px'}}
     >

@@ -36,10 +36,10 @@ function App() {
     <div className="App">
       <Container sx={{
         background: '#e0e0e0',
-        width: '95vw',
-        // height: '100vw',
+        width: '95%',
+        height: '95%',
         borderRadius: '16px',
-        margin: '10px',
+        marginY: '16px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

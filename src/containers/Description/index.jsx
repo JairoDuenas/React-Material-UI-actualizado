@@ -11,7 +11,7 @@ const Description = (props) => {
     <div>
       <>
         <Stack sx={{justifyContent: 'center'}}>
-          <Typography variant='body1'>
+          <Typography mt={2} variant='body1'>
           {bio != null ? `${bio}` : ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, porro. Consequuntur ipsum corporis sint modi sequi. Quam deserunt odit veniam vel ea unde. Sunt eaque iure consequuntur consectetur nobis eum?'}
           </Typography>
           <PaperInformation userState={userState} />

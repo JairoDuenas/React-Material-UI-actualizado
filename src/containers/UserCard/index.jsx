@@ -9,8 +9,8 @@ const UserCard = (props) => {
   return (
     <Grid
       container
-      spacing={2}
-      sx={{ marginTop: '15px' }}>
+      columns={{xs: 5, sm: 12, md: 12}}
+      sx={{ marginTop: '15px', justifyContent: 'center' }}>
       <Grid item xs={3}>
         <CardMedia
           component='img'
