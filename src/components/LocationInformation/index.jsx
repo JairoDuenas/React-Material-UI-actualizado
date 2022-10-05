@@ -15,32 +15,42 @@ const LocationInformation = (props) => {
   } = userState;
 
   return (
-    <Grid container>
+    <Grid
+      container
+      spacing={2}
+      sx={{marginTop: '15px'}}
+    >
       <Grid item xs={6} >
-        <Stack>
+        <Stack direction='row' spacing={2}>
           <LocationOnIcon />
           <Typography>
             {location ? `${location}` : ' Not Available'}
           </Typography>
-          </Stack>
+        </Stack>
       </Grid>
       <Grid item xs={6}>
+      <Stack direction='row' spacing={2}>
         <TwitterIcon />
         <Typography>
           {twitter_username ? `@${twitter_username}` : 'No available'} 
         </Typography>
+        </Stack>
       </Grid>
       <Grid item xs={6}>
+      <Stack direction='row' spacing={2}>
         <LanguageIcon />
         <Typography>
           {blog ? `${blog}` :' Not Available'}
         </Typography> 
+        </Stack>
       </Grid>
       <Grid item xs={6}>
+      <Stack direction='row' spacing={2}>
         <BusinessIcon />
           <Typography>
             {company ? `${company}` : 'Not Available'}
           </Typography> 
+        </Stack>
       </Grid>
     </Grid>
   );

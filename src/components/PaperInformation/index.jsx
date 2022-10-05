@@ -9,22 +9,26 @@ const PaperInformation = (props) => {
     following,
   } = userState
   return (
-    <div>
-      <Paper elevation={12}>
-        <Stack>
-          <Typography>Repos</Typography>
-          <Typography>{public_repos}</Typography>
+    <Paper elevation={12}>
+      <Stack
+        spacing={3}
+        direction='row'
+        sx={{justifyContent: 'space-evenly', margin: '20px'}}
+      >
+      <Stack>
+        <Typography variant='h5'>Repos</Typography>
+        <Typography variant='h6'>{public_repos}</Typography>
+      </Stack>
+      <Stack>
+        <Typography variant='h5'>Followers</Typography>
+        <Typography variant='h6'>{followers}</Typography>
+      </Stack>
+      <Stack>
+        <Typography variant='h5'>Following</Typography>
+        <Typography variant='h6'>{following}</Typography>
         </Stack>
-        <Stack>
-          <Typography>Followers</Typography>
-          <Typography>{followers}</Typography>
         </Stack>
-        <Stack>
-          <Typography>Following</Typography>
-          <Typography>{following}</Typography>
-        </Stack>
-      </Paper>
-    </div>
+    </Paper>
   );
 }
 
