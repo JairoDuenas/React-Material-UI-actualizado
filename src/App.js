@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
-import './App.css';
 import Searcher from './components/Searcher';
 import UserCard from './containers/UserCard';
 import { getGithubUser } from './services/users';
+import './App.css';
 
 function App() {
 

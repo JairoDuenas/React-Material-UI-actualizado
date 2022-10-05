@@ -1,6 +1,7 @@
-import { IconButton, Stack, TextField } from '@mui/material';
+import { CardMedia, IconButton, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import logo from '../../statics/logo2.svg';
 
 const Searcher = (props) => {
 
@@ -21,9 +22,20 @@ const Searcher = (props) => {
       direction='row'
       sx={{
         marginTop: '30px',
-        width: '80%'
+        width: '100%'
       }}
     >
+      <CardMedia
+          component='img'
+          alt='logoPersonal'
+          image={logo}
+          sx={{
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            marginX: '10px'
+          }}
+        />
       <TextField
         id='outlined-basic'
         label='GitHub User'
@@ -32,7 +44,10 @@ const Searcher = (props) => {
         value={valueInput}
         onChange={onSearchValueChange}
         size='small'
-        sx={{width: '95%', background: '#fafafa',}}
+        sx={{
+          width: '70%',
+          background: '#fafafa',
+        }}
       />
       <IconButton
         onClick={handleSubmit}
