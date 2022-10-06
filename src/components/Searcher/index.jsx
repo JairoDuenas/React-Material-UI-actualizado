@@ -1,7 +1,7 @@
 import { CardMedia, IconButton, Stack, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import logo from '../../statics/logo2.svg';
+import logo from '../../statics/logo.png';
 
 const Searcher = (props) => {
 
@@ -22,7 +22,8 @@ const Searcher = (props) => {
       direction='row'
       sx={{
         marginTop: '30px',
-        width: '100%'
+        width: '100%',
+        height: '55px'
       }}
     >
       <CardMedia
@@ -30,8 +31,8 @@ const Searcher = (props) => {
           alt='logoPersonal'
           image={logo}
           sx={{
-            width: '40px',
-            height: '40px',
+            width: '55px',
+            height: '55px',
             borderRadius: '50%',
             marginX: '10px'
           }}
@@ -43,7 +44,7 @@ const Searcher = (props) => {
         placeholder='Octocat'
         value={valueInput}
         onChange={onSearchValueChange}
-        size='small'
+        size='medium'
         sx={{
           width: '70%',
           background: '#fafafa',
@@ -51,8 +52,12 @@ const Searcher = (props) => {
       />
       <IconButton
         onClick={handleSubmit}
-        size='samll'
-        sx={{ left: '-40px' }} >
+        // size='medium'
+        sx={{
+          left: '-55px',
+          height: '55px',
+          width: '55px'
+        }} >
         <SearchIcon />
       </IconButton>
     </Stack>
